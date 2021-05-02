@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
+  {
+    path: 'grid',
+    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
+  },
+  {
+    path: 'show/:id',
+    loadChildren: () => import('./show/show.module').then( m => m.ShowPageModule)
+  },
 ];
 
 @NgModule({

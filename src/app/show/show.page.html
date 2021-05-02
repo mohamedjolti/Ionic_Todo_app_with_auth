@@ -1,0 +1,21 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-title class="titleHeader">Todos Detail</ion-title>
+    <ion-buttons slot="end">
+        <ion-button [routerLink]="['/home']">home</ion-button>     
+
+      </ion-buttons>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <ion-card color="primary" >
+    <img src="assets/task.jpg" />
+    <ion-card-header>
+      <ion-card-title>{{todo.completed}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{todo.title}}       
+     </ion-card-content>
+  </ion-card>
+</ion-content>

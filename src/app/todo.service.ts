@@ -22,4 +22,8 @@ export class TodoService {
   deleteTodo(todo: Todo): Observable<Todo> {
     
     return this._http.delete<Todo>(`https://jsonplaceholder.typicode.com/todos/${todo.id}`);
-  }}
+  }
+  getTodo(id:number):Observable<Todo>{
+    return this._http.get<Todo>("https://jsonplaceholder.typicode.com/todos/"+id);
+  }
+}

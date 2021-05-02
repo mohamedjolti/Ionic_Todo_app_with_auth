@@ -42,9 +42,9 @@ export class AuthService {
 
   checkIfLogin() {
     if (localStorage.getItem("login") == "true") {
-      this.router.navigate(["home"])
+   //   this.router.navigate(["home"])
       this.isLogin = true
-
+  
     } else {
       this.router.navigate(["login"])
       this.isLogin = false

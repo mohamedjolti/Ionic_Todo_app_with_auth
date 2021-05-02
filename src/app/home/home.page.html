@@ -2,7 +2,7 @@
   <ion-toolbar color="primary">
     <ion-title class="titleHeader">Todos Detail</ion-title>
     <ion-buttons slot="end">
-     
+        <ion-button [routerLink]="['/grid']">Grid View</ion-button>     
         <ion-button (click)="logout()">Logout</ion-button>
 
       </ion-buttons>
@@ -31,9 +31,14 @@
           {{todo.title}}
 
     
-          <ion-button (click)="delete(todo)" color="danger" expand="block">
+          <ion-button (click)="delete(todo)" color="danger" >
             remove
             <ion-icon name="trash-outline" ></ion-icon>
+          </ion-button>
+          <ion-button [routerLink]="['/show/'+todo.id]" color="warning">
+            show
+            <ion-icon name="eye-outline" ></ion-icon>
+
           </ion-button>
                 
       <div slot="end">
